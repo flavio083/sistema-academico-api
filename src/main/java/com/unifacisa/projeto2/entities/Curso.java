@@ -1,0 +1,53 @@
+package com.unifacisa.projeto2.entities;
+
+import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "curso")
+public class Curso {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+    private Integer cargaHoraria;
+
+    // O Membro 2 vai usar e descomentar isso aqui quando for fazer o relacionamento 1:N
+    // @OneToMany(mappedBy = "curso")
+    // private List<Aluno> alunos = new ArrayList<>();
+
+    public Curso() {}
+
+    public Curso(Long id, String nome, Integer cargaHoraria) {
+        this.id = id;
+        this.nome = nome;
+        this.cargaHoraria = cargaHoraria;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getCargaHoraria() {
+        return cargaHoraria;
+    }
+
+    public void setCargaHoraria(Integer cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
+    }
+}
