@@ -23,19 +23,19 @@ public class CursoService {
         return repository.findAll();
     }
 
-    public Curso findById(Long id) {
+    public Curso findById(Integer id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Curso não encontrado com o ID: " + id));
     }
 
-    public Curso update(Long id, Curso dadosAtualizados) {
+    public Curso update(Integer id, Curso dadosAtualizados) {
         Curso curso = findById(id);
         curso.setNome(dadosAtualizados.getNome());
         curso.setCargaHoraria(dadosAtualizados.getCargaHoraria());
         return repository.save(curso);
     }
 
-    public void delete(Long id) {
+    public void delete(Integer id) {
         repository.deleteById(id);
     }
 }

@@ -1,7 +1,5 @@
 package com.unifacisa.projeto2.controllers;
 
-package com.unifacisa.projeto2.controllers;
-
 import com.unifacisa.projeto2.entities.ProjetoExtensao;
 import com.unifacisa.projeto2.services.ProjetoExtensaoService;
 import org.springframework.beans.factory.annotation.Autowired;

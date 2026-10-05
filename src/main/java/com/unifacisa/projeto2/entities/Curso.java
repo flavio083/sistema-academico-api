@@ -10,27 +10,27 @@ public class Curso {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String nome;
     private Integer cargaHoraria;
 
-    @OneToMany(mappedBy = "curso")
-    private List<Aluno> alunos = new ArrayList<>();
+    // @OneToMany(mappedBy = "curso")
+    // private List<Aluno> alunos = new ArrayList<>();
 
     public Curso() {}
 
-    public Curso(Long id, String nome, Integer cargaHoraria) {
+    public Curso(Integer id, String nome, Integer cargaHoraria) {
         this.id = id;
         this.nome = nome;
         this.cargaHoraria = cargaHoraria;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
