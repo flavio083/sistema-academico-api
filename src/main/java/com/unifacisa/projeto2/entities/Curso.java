@@ -15,9 +15,8 @@ public class Curso {
     private String nome;
     private Integer cargaHoraria;
 
-    // O Membro 2 vai usar e descomentar isso aqui quando for fazer o relacionamento 1:N
-    // @OneToMany(mappedBy = "curso")
-    // private List<Aluno> alunos = new ArrayList<>();
+    @OneToMany(mappedBy = "curso")
+    private List<Aluno> alunos = new ArrayList<>();
 
     public Curso() {}
 
