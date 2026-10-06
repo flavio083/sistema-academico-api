@@ -15,8 +15,8 @@ public class Curso {
     private String nome;
     private Integer cargaHoraria;
 
-    // @OneToMany(mappedBy = "curso")
-    // private List<Aluno> alunos = new ArrayList<>();
+    @OneToMany(mappedBy = "curso")
+    private List<Aluno> alunos = new ArrayList<>();
 
     public Curso() {}
 
