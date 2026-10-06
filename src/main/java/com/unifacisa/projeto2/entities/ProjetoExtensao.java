@@ -1,7 +1,5 @@
 package com.unifacisa.projeto2.entities;
 
-package com.unifacisa.projeto2.entities;
-
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
