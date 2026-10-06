@@ -23,7 +23,7 @@ public class Carteirinha {
     private String dataValidade;
 
     @OneToOne
-    @JoinColumn(name = "aluno_id")
+    @JoinColumn(name = "aluno_id", unique = true)
     private Aluno aluno;
 
 }
