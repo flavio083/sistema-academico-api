@@ -6,7 +6,6 @@ import com.unifacisa.projeto2.repositories.AlunoRepository;
 import com.unifacisa.projeto2.repositories.ProjetoExtensaoRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.Optional;
 
 @Service
