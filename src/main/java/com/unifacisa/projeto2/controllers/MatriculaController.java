@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/projetos-extensao")
+@RequestMapping("/projetos")
 public class MatriculaController {
 
     private final MatriculaService service;
