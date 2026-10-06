@@ -1,5 +1,6 @@
 package com.unifacisa.projeto2.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,6 +25,7 @@ public class Curso {
     private String nome;
     private Integer cargaHoraria;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "curso")
     private List<Aluno> alunos = new ArrayList<>();
 

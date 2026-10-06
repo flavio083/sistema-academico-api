@@ -1,6 +1,7 @@
 package com.unifacisa.projeto2.entities;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "aluno")
@@ -13,6 +14,7 @@ public class Aluno {
     private String nome;
     private String email;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "curso_id")
     private Curso curso;
